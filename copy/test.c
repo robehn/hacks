@@ -16,7 +16,6 @@ void sigint_handler(int signo, siginfo_t *info, void *context) {
 
 int main(int argc, char* argv) {
   struct sigaction sa;
-  pthread_t intr_thread;
 
   sa.sa_flags = SA_SIGINFO;
   sa.sa_sigaction = sigint_handler;
